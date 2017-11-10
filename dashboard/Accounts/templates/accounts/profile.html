@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+<title>Profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1> PROFILE </h1>
+  <br>
+  <p>UserName: {{user}} </p>
+  <p>FirstName: {{user.first_name}}</p>
+  <p>LastName: {{user.last_name}}</p>
+  <p>Email:  {{user.email}} </p>
+  <P>Title: {{user.userprofile.title}}</p>
+  <p>Subject Major:{{user.userprofile.subject_major}}</p>
+  <p>Address: {{user.userprofile.address}}</p>
+  <p> city : {{user.userprofile.city}}</p>
+  <p> State: {{user.userprofile.state_province}}</p>
+  <p> Country:{{user.userprofile.country}}</p>
+  <p> Phone: {{user.userprofile.phone}}</p>
+  <img src="{{user.userprofile.image.url }}" width="240">
+</div>
+
+{% endblock %}
